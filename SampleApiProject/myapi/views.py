@@ -14,6 +14,6 @@ def IdealWeight(heightdata):
         height = json.loads(heightdata.body)
         weight = str(height*10)
 
-        return JsonResponse("Ideal weight should be:"+weight+"kg",safe=False)
+        return JsonResponse("Ideal weight is:"+weight+"kg",safe=False)
     except ValueError as e:
         return Response(e.args[0],status.HTTP_400_BAD_REQUEST)
